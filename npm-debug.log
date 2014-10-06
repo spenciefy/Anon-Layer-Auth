@@ -1,0 +1,95 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', '-g' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.32
+4 verbose cache add [ '.', null ]
+5 verbose cache add name=undefined spec="." args=[".",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: '.',
+6 verbose parsed url   path: '.',
+6 verbose parsed url   href: '.' }
+7 silly lockFile 3a52ce78- .
+8 verbose lock . /Users/spenceryen/.npm/3a52ce78-.lock
+9 verbose tar pack [ '/Users/spenceryen/.npm/anonlayerauth/0.0.1/package.tgz',
+9 verbose tar pack   '.' ]
+10 verbose tarball /Users/spenceryen/.npm/anonlayerauth/0.0.1/package.tgz
+11 verbose folder .
+12 info prepublish anonlayerauth@0.0.1
+13 silly lockFile 1f1177db-tar tar://.
+14 verbose lock tar://. /Users/spenceryen/.npm/1f1177db-tar.lock
+15 silly lockFile 1837a255--anonlayerauth-0-0-1-package-tgz tar:///Users/spenceryen/.npm/anonlayerauth/0.0.1/package.tgz
+16 verbose lock tar:///Users/spenceryen/.npm/anonlayerauth/0.0.1/package.tgz /Users/spenceryen/.npm/1837a255--anonlayerauth-0-0-1-package-tgz.lock
+17 silly lockFile 1f1177db-tar tar://.
+18 silly lockFile 1f1177db-tar tar://.
+19 silly lockFile 1837a255--anonlayerauth-0-0-1-package-tgz tar:///Users/spenceryen/.npm/anonlayerauth/0.0.1/package.tgz
+20 silly lockFile 1837a255--anonlayerauth-0-0-1-package-tgz tar:///Users/spenceryen/.npm/anonlayerauth/0.0.1/package.tgz
+21 silly lockFile c2d19422--npm-anonlayerauth-0-0-1-package /Users/spenceryen/.npm/anonlayerauth/0.0.1/package
+22 verbose lock /Users/spenceryen/.npm/anonlayerauth/0.0.1/package /Users/spenceryen/.npm/c2d19422--npm-anonlayerauth-0-0-1-package.lock
+23 silly lockFile c2d19422--npm-anonlayerauth-0-0-1-package /Users/spenceryen/.npm/anonlayerauth/0.0.1/package
+24 silly lockFile c2d19422--npm-anonlayerauth-0-0-1-package /Users/spenceryen/.npm/anonlayerauth/0.0.1/package
+25 silly lockFile 3a52ce78- .
+26 silly lockFile 3a52ce78- .
+27 silly resolved [ { name: 'anonlayerauth',
+27 silly resolved     version: '0.0.1',
+27 silly resolved     description: 'Generated layer identity tokens',
+27 silly resolved     main: 'index.js',
+27 silly resolved     scripts: { start: 'node index.js' },
+27 silly resolved     dependencies: { express: '~4.9.x' },
+27 silly resolved     engines: { node: '0.10.x' },
+27 silly resolved     repository:
+27 silly resolved      { type: 'git',
+27 silly resolved        url: 'https://github.com/heroku/node-js-getting-started' },
+27 silly resolved     license: 'MIT',
+27 silly resolved     gitHead: 'ca1bcfb522d05ccc71878a1bc3dac9599eba1f09',
+27 silly resolved     bugs: { url: 'https://github.com/heroku/node-js-getting-started/issues' },
+27 silly resolved     readme: 'ERROR: No README data found!',
+27 silly resolved     homepage: 'https://github.com/heroku/node-js-getting-started',
+27 silly resolved     _id: 'anonlayerauth@0.0.1',
+27 silly resolved     _shasum: '93d3fba178e0c424178c76ec85770bd81cb6d106',
+27 silly resolved     _from: '.' } ]
+28 info install anonlayerauth@0.0.1 into /usr/local/lib
+29 info installOne anonlayerauth@0.0.1
+30 verbose lib/node_modules/anonlayerauth unbuild
+31 verbose tar unpack /Users/spenceryen/.npm/anonlayerauth/0.0.1/package.tgz
+32 silly lockFile bd03b80a-l-lib-node-modules-anonlayerauth tar:///usr/local/lib/node_modules/anonlayerauth
+33 verbose lock tar:///usr/local/lib/node_modules/anonlayerauth /Users/spenceryen/.npm/bd03b80a-l-lib-node-modules-anonlayerauth.lock
+34 silly lockFile 1837a255--anonlayerauth-0-0-1-package-tgz tar:///Users/spenceryen/.npm/anonlayerauth/0.0.1/package.tgz
+35 verbose lock tar:///Users/spenceryen/.npm/anonlayerauth/0.0.1/package.tgz /Users/spenceryen/.npm/1837a255--anonlayerauth-0-0-1-package-tgz.lock
+36 silly gunzTarPerm modes [ '755', '644' ]
+37 error Error: EACCES, mkdir '/usr/local/lib/node_modules/anonlayerauth'
+37 error  { [Error: EACCES, mkdir '/usr/local/lib/node_modules/anonlayerauth']
+37 error   errno: 3,
+37 error   code: 'EACCES',
+37 error   path: '/usr/local/lib/node_modules/anonlayerauth',
+37 error   fstream_type: 'Directory',
+37 error   fstream_path: '/usr/local/lib/node_modules/anonlayerauth',
+37 error   fstream_class: 'DirWriter',
+37 error   fstream_stack:
+37 error    [ '/usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23',
+37 error      '/usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53',
+37 error      'Object.oncomplete (fs.js:107:15)' ] }
+38 error Please try running this command again as root/Administrator.
+39 error System Darwin 14.0.0
+40 error command "node" "/usr/local/bin/npm" "install" "-g"
+41 error cwd /Users/spenceryen/Desktop/AnonLayerAuth
+42 error node -v v0.10.32
+43 error npm -v 1.4.28
+44 error path /usr/local/lib/node_modules/anonlayerauth
+45 error fstream_path /usr/local/lib/node_modules/anonlayerauth
+46 error fstream_type Directory
+47 error fstream_class DirWriter
+48 error code EACCES
+49 error errno 3
+50 error stack Error: EACCES, mkdir '/usr/local/lib/node_modules/anonlayerauth'
+51 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23
+51 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53
+51 error fstream_stack Object.oncomplete (fs.js:107:15)
+52 verbose exit [ 3, true ]

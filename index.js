@@ -9,8 +9,8 @@ var r = require('jsrsasign');
 
 // Layer Vars
 var layerProviderID = 'ebe40df2-19c1-11e4-a04f-a19800003b1a';
-var layerKeyID = '01c62292-19de-11e4-b86f-a1980000006e';
-var privateKey = fs.readFileSync('keys/layer-key.pem');
+var layerKeyID = 'f5a06916-4d9d-11e4-bfbd-c770000045cb';
+var privateKey = fs.readFileSync('keys/layerkey.pem');
 
 app.use(bodyParser());
 
