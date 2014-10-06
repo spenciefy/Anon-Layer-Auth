@@ -41,6 +41,11 @@ app.post('/authenticate', function(req, res){
     res.json({'identityToken': jws})
 });
 
+app.get('/', function (req, res) {
+      console.log('get on %d', server.address().port);
+
+});
+
 var server = app.listen(3000, function() {
 
     console.log('Listening on port %d', server.address().port);
