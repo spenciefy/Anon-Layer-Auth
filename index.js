@@ -42,8 +42,7 @@ app.post('/authenticate', function(req, res){
 });
 
 app.get('/', function (req, res) {
-      console.log('get on %d', server.address().port);
-
+  res.send('Anon layer identity token generator (do i even know how to do this)');
 });
 
 var server = app.listen(3000, function() {
