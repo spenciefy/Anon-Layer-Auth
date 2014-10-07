@@ -40,7 +40,7 @@ app.use(express.static(__dirname + '/public'))
 
 //     // var jws = r.jws.JWS.sign('RS256', header, claim, privateKey.toString());
 
-     res.json({'identityToken': 'aaksldjfa3lkjfslkdjf'})
+//     res.json({'identityToken': 'aaksldjfa3lkjfslkdjf'})
 
 // });
 
