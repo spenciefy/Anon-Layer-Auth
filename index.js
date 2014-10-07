@@ -2,13 +2,6 @@
 var express = require('express');
 var app = express();
 
-// if (process.env.REDISTOGO_URL) {
-//   var rtg   = require("url").parse(process.env.REDISTOGO_URL);
-//   var redis = require("redis").createClient(rtg.port, rtg.hostname);
-//   rtgedis.auth(rtg.auth.split(":")[1]);
-// } else {
-var redis = require("redis").createClient();
-
 var bodyParser = require('body-parser');
 var fs = require('fs');
 var r = require('jsrsasign');
@@ -47,7 +40,6 @@ app.post('/authenticate', function(req, res){
     console.log(new r.Signature());
 
     var jws = r.jws.JWS.sign('RS256', header, claim, privateKey.toString());
-   //     var jws = r.jws.JWS.sign({header : 'RS256', payload: JSON.stringify(claim), privateKey: privateKey.toString()});
 
     console.log("jws" + jws);
 
