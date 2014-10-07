@@ -1,8 +1,16 @@
 // Requires
 var express = require('express');
 var app = express();
-var redis = require('redis');
-var db = redis.createClient();
+var db = require("redis").createClient();
+
+if (process.env.REDISTOGO_URL) {
+  var rtg   = require("url").parse(process.env.REDISTOGO_URL);
+  var redis = require("redis").createClient(rtg.port, rtg.hostname);
+rtgedis.auth(rtg.auth.split(":")[1]);
+} else {
+    var redis = require("redis").createClient();
+}
+
 var bodyParser = require('body-parser');
 var fs = require('fs');
 var r = require('jsrsasign');
