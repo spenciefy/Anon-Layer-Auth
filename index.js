@@ -38,7 +38,7 @@ app.post('/authenticate', function(req, res){
 
     var claim = JSON.stringify({
       iss: layerProviderID, // The Layer Provider ID
-      prn: req.body.user_id, // User Identifier
+      prn: req.body.userid, // User Identifier
       iat: currentTimeInSeconds, // Integer Time of Token Issuance 
       exp: expirationTime, // Integer Arbitrary time of Token Expiration
       nce: req.body.nonce, //Nonce obtained from the Layer Client SDK
@@ -47,7 +47,7 @@ app.post('/authenticate', function(req, res){
     console.log(new r.Signature());
 
     var jws = r.jws.JWS.sign('RS256', header, claim, privateKey.toString());
-    console.log(jws);
+    console.log("jsw:" + jws);
 
      res.json({'identityToken': jws})
 
