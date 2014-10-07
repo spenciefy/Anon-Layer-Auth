@@ -21,6 +21,9 @@ var privateKey = fs.readFileSync('keys/layerkey.pem');
 
 app.use(bodyParser.json());
 
+app.set('port', (process.env.PORT || 5000))
+app.use(express.static(__dirname + '/public'))
+
 app.post('/authenticate', function(req, res){
 
     var header =  JSON.stringify({
