@@ -9,9 +9,10 @@
   "dependencies": {
     "express": "~4.9.x",
     "body-parser": "~1.9.x",
-    "redis": "~0.12.x",
+    "redis": "~0.6.x",
     "fs": "~0.0.x",
-    "jsrsasign": "~0.0.x"
+    "jsrsasign": "~0.0.x",
+    "hiredis" : "0.1.x"
   },
   "engines": {
     "node": "0.10.x"
