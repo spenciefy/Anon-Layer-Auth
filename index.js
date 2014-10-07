@@ -19,7 +19,7 @@ var layerProviderID = 'ebe40df2-19c1-11e4-a04f-a19800003b1a';
 var layerKeyID = 'f5a06916-4d9d-11e4-bfbd-c770000045cb';
 var privateKey = fs.readFileSync('keys/layerkey.pem');
 
-app.use(bodyParser.json());
+app.use(bodyParser.raw());
 
 app.set('port', (process.env.PORT || 5000))
 app.use(express.static(__dirname + '/public'))
