@@ -1,8 +1,8 @@
 // Requires
 var express = require('express');
 var app = express();
-// var redis = require('redis');
-// var db = redis.createClient();
+var redis = require('redis');
+var db = redis.createClient();
 var bodyParser = require('body-parser');
 var fs = require('fs');
 var r = require('jsrsasign');
@@ -41,7 +41,7 @@ app.post('/authenticate', function(req, res){
     var jws = r.jws.JWS.sign('RS256', header, claim, privateKey.toString());
     console.log(jws);
 
-     res.json({'identityToken': 'jws'})
+     res.json({'identityToken': jws})
 
  });
 
