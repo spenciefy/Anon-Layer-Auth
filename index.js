@@ -1,11 +1,11 @@
 // Requires
 var express = require('express');
 var app = express();
-// var redis = require('redis');
-// var db = redis.createClient();
-// var bodyParser = require('body-parser')
-// var fs = require('fs')
-// var r = require('jsrsasign');
+var redis = require('redis');
+var db = redis.createClient();
+var bodyParser = require('body-parser')
+var fs = require('fs')
+var r = require('jsrsasign');
 
 // // Layer Vars
 // var layerProviderID = 'ebe40df2-19c1-11e4-a04f-a19800003b1a';
@@ -16,7 +16,7 @@ var app = express();
 app.set('port', (process.env.PORT || 5000))
 app.use(express.static(__dirname + '/public'))
 
-// app.post('/authenticate', function(req, res){
+ app.post('/authenticate', function(req, res){
 
 //     // var header =  JSON.stringify({
 //     //   typ: "JWS", // Expresses a MIMEType of application/JWS
@@ -40,12 +40,12 @@ app.use(express.static(__dirname + '/public'))
 
 //     // var jws = r.jws.JWS.sign('RS256', header, claim, privateKey.toString());
 
-//     res.json({'identityToken': 'aaksldjfa3lkjfslkdjf'})
+     res.json({'identityToken': 'aaksldjfa3lkjfslkdjf'})
 
-// });
+ });
 
 app.get('/', function(request, response) {
-  response.send('Hello World!')
+  response.send('aakash is a noob!!    and alex')
 })
 
 // var server = app.listen(3000, function() {
