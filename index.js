@@ -2,13 +2,13 @@
 var express = require('express');
 var app = express();
 
-if (process.env.REDISTOGO_URL) {
-  var rtg   = require("url").parse(process.env.REDISTOGO_URL);
-  var redis = require("redis").createClient(rtg.port, rtg.hostname);
-rtgedis.auth(rtg.auth.split(":")[1]);
-} else {
-    var redis = require("redis").createClient();
-}
+// if (process.env.REDISTOGO_URL) {
+//   var rtg   = require("url").parse(process.env.REDISTOGO_URL);
+//   var redis = require("redis").createClient(rtg.port, rtg.hostname);
+//   rtgedis.auth(rtg.auth.split(":")[1]);
+// } else {
+//     var redis = require("redis").createClient();
+// }
 
 var bodyParser = require('body-parser');
 var fs = require('fs');
@@ -19,9 +19,7 @@ var layerProviderID = 'ebe40df2-19c1-11e4-a04f-a19800003b1a';
 var layerKeyID = 'f5a06916-4d9d-11e4-bfbd-c770000045cb';
 var privateKey = fs.readFileSync('keys/layerkey.pem');
 
-//app.use(bodyParser());
-app.set('port', (process.env.PORT || 5000))
-app.use(express.static(__dirname + '/public'))
+app.use(bodyParser());
 
 app.post('/authenticate', function(req, res){
 
