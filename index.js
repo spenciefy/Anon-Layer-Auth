@@ -3,9 +3,9 @@ var express = require('express');
 var app = express();
 var redis = require('redis');
 // var db = redis.createClient();
-// var bodyParser = require('body-parser')
-// var fs = require('fs')
-// var r = require('jsrsasign');
+var bodyParser = require('body-parser');
+var fs = require('fs');
+var r = require('jsrsasign');
 
 // // Layer Vars
 // var layerProviderID = 'ebe40df2-19c1-11e4-a04f-a19800003b1a';
