@@ -7,8 +7,7 @@ var app = express();
 //   var redis = require("redis").createClient(rtg.port, rtg.hostname);
 //   rtgedis.auth(rtg.auth.split(":")[1]);
 // } else {
-//     var redis = require("redis").createClient();
-// }
+var redis = require("redis").createClient();
 
 var bodyParser = require('body-parser');
 var fs = require('fs');
@@ -43,11 +42,14 @@ app.post('/authenticate', function(req, res){
       exp: expirationTime, // Integer Arbitrary time of Token Expiration
       nce: req.body.nonce, //Nonce obtained from the Layer Client SDK
     });
+    console.log("claim" + JSON.stringify(claim) + "private key:" + privateKey.toString());
 
     console.log(new r.Signature());
 
     var jws = r.jws.JWS.sign('RS256', header, claim, privateKey.toString());
-    console.log("jsw:" + jws);
+   //     var jws = r.jws.JWS.sign({header : 'RS256', payload: JSON.stringify(claim), privateKey: privateKey.toString()});
+
+    console.log("jws" + jws);
 
      res.json({'identityToken': jws})
 
