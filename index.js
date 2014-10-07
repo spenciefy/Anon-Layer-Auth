@@ -12,7 +12,9 @@ var layerProviderID = 'ebe40df2-19c1-11e4-a04f-a19800003b1a';
 var layerKeyID = 'f5a06916-4d9d-11e4-bfbd-c770000045cb';
 var privateKey = fs.readFileSync('keys/layerkey.pem');
 
-app.use(bodyParser());
+//app.use(bodyParser());
+app.set('port', (process.env.PORT || 5000))
+app.use(express.static(__dirname + '/public'))
 
 app.post('/authenticate', function(req, res){
 
@@ -42,12 +44,17 @@ app.post('/authenticate', function(req, res){
 
 });
 
-app.get('/', function (req, res) {
-  res.send('Anon layer identity token generator (do i even know how to do this)');
-});
+app.get('/', function(request, response) {
+  response.send('Hello World!')
+})
 
 // var server = app.listen(3000, function() {
 
 //     console.log('Listening on port %d', server.address().port);
 
 // });
+
+app.listen(app.get('port'), function() {
+  console.log("Node app is running at localhost:" + app.get('port'))
+})
+
