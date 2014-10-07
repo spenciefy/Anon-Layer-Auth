@@ -39,13 +39,14 @@ app.post('/authenticate', function(req, res){
     console.log(new r.Signature());
 
     var jws = r.jws.JWS.sign('RS256', header, claim, privateKey.toString());
+    console.log(jws);
 
-     res.json({'identityToken': 'aaksldjfa3lkjfslkdjf'})
+     res.json({'identityToken': 'jws'})
 
  });
 
 app.get('/', function(request, response) {
-  response.send('aakash is a noob!!    and alex')
+  response.send('this should work')
 })
 
 var server = app.listen(app.get('port'), function() {
