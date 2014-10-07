@@ -19,7 +19,7 @@ var layerProviderID = 'ebe40df2-19c1-11e4-a04f-a19800003b1a';
 var layerKeyID = 'f5a06916-4d9d-11e4-bfbd-c770000045cb';
 var privateKey = fs.readFileSync('keys/layerkey.pem');
 
-app.use(bodyParser());
+app.use(bodyParser.json());
 
 app.post('/authenticate', function(req, res){
 
